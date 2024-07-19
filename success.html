@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield Challenge</title>
+    <style>
+        /* General Styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #282828;
+  color: #e0e0e0;
+  text-align: center;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+h1, h2 {
+  font-family: "Oswald", sans-serif;
+  color: #c59d5f;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Form Enhancements */
+form {
+  background-color: #383838;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 12px;
+  border: 2px solid #c59d5f;
+  border-radius: 5px;
+  background-color: #282828;
+  color: #e0e0e0;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  background-color: #c59d5f;
+  color: #1e1e1e;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #a87e4b;
+}
+
+/* Scrolling Hint Text (Improved Contrast) */
+.scroll-container {
+  background-color: #383838;
+  padding: 15px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.scroll-text {
+  animation: scrollText 18s linear infinite;
+  white-space: nowrap;
+  font-size: 1.1em;
+}
+
+/* Accessibility Enhancements */
+strong {
+  text-decoration: underline;
+}
+
+input[type="text"]:focus {
+  outline: 2px solid #c59d5f;
+}
+/* Hint Styling */
+p { /* Basic paragraph styling */
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1.1em; /* Slightly larger for better readability */
+}
+
+.hint { /* Class for each hint paragraph */
+  position: relative; /* Allows for absolute positioning of pseudo-elements */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background-color: rgba(56, 56, 56, 0.8); /* Semi-transparent dark background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensures pseudo-elements stay within the container */
+}
+
+.hint::before { /* Decorative element before each hint */
+  content: '';
+  position: absolute;
+  top: -0.2px; left: -0.2px; /* Adjust positioning as needed */
+  width: 160%; height: 120%;
+  background: linear-gradient(45deg, #c59d5f, #6f5438); /* Gold gradient */
+  opacity: 0.4; /* Make it subtle */
+  transform: rotate(-10deg); /* Slight tilt for dynamism */
+  z-index: -1; /* Place it behind the hint text */
+}
+
+.hint strong { /* Highlight keywords */
+  color: #c59d5f; /* Gold color */
+  font-weight: bold;
+}
+
+.hint span { /* Styling for the number 5 in Hint 3 */
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #c59d5f;
+  color: #1e1e1e;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Animation for the number 5 */
+.hint span {
+  animation: pulse 5s infinite; 
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+    </style>
+</head>
+<body>
+  <script>alert("Don't look anywhere, just focus on solving the secret lab.")</script>
+    <h1>Congratulations, Rider!</h1>
+    <p>You've successfully unlocked the Royal Enfield vault.</p>
+    <p>But the journey doesn't end here. To claim the grand prize - a legendary Royal Enfield motorcycle.</p>
+    <div class="hint">
+    <p>Hint 1: The code is shrouded in the whispers of history, encrypted using a technique favored by Julius Caesar himself.</p>
+    <p>Hint 2: The path to victory, like a secret code etched into the blueprints of a classic machine, lies hidden within the <strong>login</strong> one, waiting to be deciphered by shifting your perspective.</p>
+    <p>Hint 3: The key to the code is a number, a sacred digit revered by riders worldwide. It's the number of gears that power the legendary Royal Enfield Classic 500. <span style="font-size: 4px;">5</span></p>
+    </div>
+    <h2>Submit the Secret Code</h2>
+    <form action="/submit_flag" method="POST">
+        <label for="flag">Enter Code:</label>
+        <input type="text" id="flag" name="flag"><br><br>
+        <input type="submit" value="Claim Your Prize">
+    </form>
+
+    <div class="scroll-container">
+        <div class="scroll-text">Welcome to the Royal Enfield Challenge. Unlock the secrets and claim your prize!</div>
+    </div>
+</body>
+</html>

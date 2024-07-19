@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* CSS styles for the login page */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .account_main {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            animation: animateVideo 30s linear infinite;
+        }
+        @keyframes animateVideo {
+            0% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .form_area {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            max-width: 80%;
+            text-align: center;
+        }
+        .form_con h2 {
+            margin-bottom: 20px;
+        }
+        .input-box {
+            margin-bottom: 20px;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .button button, .button a {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button button:hover, .button a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="account_main">
+        <video muted loop autoplay class="video">
+            <source src="{{ url_for('static', filename='Royal Enfield Interceptor.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="form_area">
+            <div class="main_con">
+                <div class="headline"></div>
+                <div class="form_con">
+                    <div class="log_form">
+                        <h2>Login Now!!</h2>
+                        <form action="/login" method="POST"> 
+                            <div class="input-box">
+                                <input type="text" name="email" required>
+                                <label>Email</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" name="password" required>
+                                <label>Password</label>
+                            </div>
+                            <div class="button">
+                                <button type="submit">LOGIN</button>
+                                <a href="index.html">Home</a>  
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#action").click(function(){
+            $(".log_form, .reg_form").toggle(1200);
+        });
+        var encryptedData = "HYK{ym1x_1x_rd_x3hw3y_kq4l}"; // Examine this variable closely
+
+    </script>
+</body>
+</html>
